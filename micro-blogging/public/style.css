@@ -1,0 +1,136 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f8ff; /* Light sky blue background */
+    margin: 0;
+    padding: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+    background-color: #121212; /* Dark mode background */
+    color: #ffffff; /* White text in dark mode */
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s;
+}
+
+h1 {
+    text-align: center;
+    color: #ff6347; /* Tomato color for title */
+    font-family: 'Pacifico', cursive; /* Different font for title */
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #28a745; /* Green background for buttons */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #218838; /* Darker green on hover */
+    transform: scale(1.05); /* Slightly larger on hover */
+}
+
+.post-form {
+    margin-bottom: 20px;
+}
+
+textarea {
+    width: 100%;
+    height: 60px;
+    margin: 10px 0;
+    padding: 10px;
+    border: 2px solid #007bff; /* Blue border for text area */
+    border-radius: 5px;
+    resize: none;
+    transition: border-color 0.3s;
+}
+
+textarea:focus {
+    border-color: #0056b3; /* Darker blue on focus */
+}
+
+.post {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    background: linear-gradient(145deg, #ffe5e5, #ffcccc); /* Soft pink gradient for posts */
+    box-shadow: 6px 6px 12px #c4c4c4, -6px -6px 12px #ffffff;
+}
+
+.post img {
+    max-width: 100%;
+    height: auto; /* Ensures the image maintains its aspect ratio */
+    border-radius: 5px; /* Rounded corners for images */
+}
+
+.reactions {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.reactions button {
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+.comment-form {
+    margin-top: 10px;
+}
+
+.comment {
+    margin-left: 20px;
+    font-size: 0.9em;
+    color: #555;
+    border-left: 2px solid #007bff; /* Blue left border for comments */
+    padding-left: 10px;
+}
+
+.timestamp {
+    font-size: 0.8em;
+    color: #888;
+}
+
+#charCount {
+    font-size: 0.9em;
+    color: #28a745; /* Green text for character count */
+    text-align: right; /* Align text to the right */
+}
+
+.delete-btn {
+    background-color: #dc3545; /* Red background for delete button */
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    float: right; /* Align to the right */
+}
+
+.delete-btn:hover {
+    background-color: #c82333; /* Darker red on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+}

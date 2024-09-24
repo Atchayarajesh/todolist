@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KATS APP</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>KATS APP</h1>
+        <button id="toggleTheme">Switch to Dark Mode</button>
+        
+        <div class="post-form">
+            <input type="text" id="username" placeholder="Enter your username" required />
+            <textarea id="postContent" placeholder="What's on your mind?" maxlength="200" required></textarea>
+            <input type="file" id="postImage" accept="image/*" />
+            <button id="submitPost">Post</button>
+            <p id="charCount">200 characters remaining</p>
+        </div>
+
+        <h2>Posts</h2>
+        <div id="postsContainer"></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
