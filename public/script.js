@@ -3,12 +3,12 @@ const restaurants = {
     alifRestaurant: {
         name: 'Alif Restaurant',
         specialty: 'Pakistani Cuisine',
-        image:'D:\full stack\fooddelivery\public\assets\alif_restaurant.jpg.jpg'// Ensure this image exists in the assets folder
+        image:'alif_restaurant.jpg'// Ensure this image exists in the assets folder
     },
     bilalRestaurant: {
         name: 'Bilal Restaurant',
         specialty: 'Chinese Cuisine',
-        image: 'assets/bilal_restaurant.jpg' // Ensure this image exists in the assets folder
+        image: 'bilal_restaurant.jpg' // Ensure this image exists in the assets folder
     }
 };
 
@@ -17,7 +17,7 @@ const menuItems = {
         {
             name: 'Biryani',
             price: 9.99,
-            image: 'D:\full stack\fooddelivery\public\assets\biryani.jpg.jpg' // Ensure this image exists in the assets folder
+            image: 'biryani.jpg' // Ensure this image exists in the assets folder
         },
         {
             name: 'Kebab Platter',
@@ -29,12 +29,12 @@ const menuItems = {
         {
             name: 'Sweet and Sour Chicken',
             price: 10.99,
-            image: 'assets/bilal_restaurant.jpg' // Ensure this image exists in the assets folder
+            image: 'sweet_sour_chicken.jpg' // Ensure this image exists in the assets folder
         },
         {
             name: 'Chow Mein',
             price: 8.99,
-            image: 'assets/chow_mein.jpg' // Ensure this image exists in the assets folder
+            image: 'chow_mein.jpg' // Ensure this image exists in the assets folder
         }
     ]
 };
