@@ -1,0 +1,121 @@
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #fff3e6; /* Light orange background */
+}
+
+/* Header Styling */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+    background-color: #ff6347; /* Tomato red background */
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+/* Restaurant List Styling */
+.restaurant {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: #ffffff; /* White background for restaurants */
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.restaurant:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.restaurant-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 10px;
+    margin-right: 20px;
+    border: 2px solid #ff6347; /* Tomato red border for images */
+}
+
+/* Restaurant Details */
+.restaurant-details h3 {
+    margin: 0;
+    margin-bottom: 10px;
+    color: #ff6347; /* Tomato red color for restaurant names */
+}
+
+.restaurant-details p {
+    margin: 0;
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+/* Menu Item Styling */
+.menu-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: #ffffff; /* White background for menu items */
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.menu-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.food-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
+    margin-right: 20px;
+    border: 2px solid #ff6347; /* Tomato red border for food images */
+}
+
+.food-details {
+    flex-grow: 1;
+}
+
+.food-details p {
+    font-size: 18px;
+    margin: 0;
+    margin-bottom: 10px;
+    color: #333; /* Dark text for food names */
+}
+
+/* Cart Styling */
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    background-color: #ffffff; /* White background for cart items */
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #ff8c00; /* Dark orange background for buttons */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #ff7f50; /* Coral color on hover */
+}
+
+/* Total Display Styling */
+h3 {
+    color: #333; /* Dark text for total */
+}
