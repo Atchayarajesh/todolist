@@ -49,6 +49,7 @@ function renderPosts() {
 // Function to delete a post
 function deletePost(index) {
     posts.splice(index, 1); // Remove the post from the array
+    updateLocalStorage(); // Update local storage after deletion
     renderPosts(); // Re-render the posts
 }
 
@@ -64,6 +65,7 @@ function addComment(index) {
     if (commentInput.value) {
         posts[index].comments.push(commentInput.value);
         commentInput.value = "";
+        updateLocalStorage(); // Update local storage after adding a comment
         renderPosts();
     }
 }
@@ -95,6 +97,7 @@ function reactToPost(index, reaction) {
             break;
     }
 
+    updateLocalStorage(); // Update local storage after reacting
     renderPosts();
 }
 
@@ -126,6 +129,7 @@ submitPostButton.addEventListener("click", () => {
     postContentInput.value = "";
     imageInput.value = "";
     charCountDisplay.textContent = "200 characters remaining"; // Reset character count display
+    updateLocalStorage(); // Store the new post in local storage
     renderPosts();
 });
 
@@ -134,3 +138,22 @@ document.getElementById("toggleTheme").addEventListener("click", () => {
     isDarkMode = !isDarkMode;
     document.body.classList.toggle("dark-mode", isDarkMode);
 });
+
+// Save posts to local storage
+function updateLocalStorage() {
+    localStorage.setItem('microblogPosts', JSON.stringify(posts));
+}
+
+// Load posts from local storage when the page loads
+window.addEventListener("load", () => {
+    const storedPosts = localStorage.getItem('microblogPosts');
+    if (storedPosts) {
+        posts = JSON.parse(storedPosts);
+        renderPosts();
+    }
+});
+
+
+
+    
+ 
