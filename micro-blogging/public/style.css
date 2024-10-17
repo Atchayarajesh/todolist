@@ -1,5 +1,5 @@
 body {
-    font-family: 'arial', sans-serif;
+    font-family:  'Roboto', sans-serif;
     background-color: #f0f8ff; /* Light sky blue background */
     margin: 0;
     padding: 20px;
@@ -24,7 +24,7 @@ body.dark-mode {
 h1 {
     text-align: center;
     color: #ff6347; /* Tomato color for title */
-    font-family: 'Pacifico', cursive; /* Different font for title */
+    font-family: ' Roboto' /* Different font for title */
     margin-bottom: 20px;
 }
 
