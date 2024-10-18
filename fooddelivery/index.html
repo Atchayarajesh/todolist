@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Delivery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Home Section -->
+    <section id="home">
+        <img src="C:\Users\THILAGAVATHI M\Downloads\food-delivery-5217579_640.png" alt="Food Delivery Logo" class="logo">
+        <h1>Welcome to KATS's Food Delivery </h1>
+        <P>pasikidha?vaanga sapdalam </p>
+        <button onclick="goToRestaurants()">Explore Restaurants</utton>
+    </section>
+
+    <!-- Restaurant Section -->
+    <section id="restaurant" style="display:none;">
+        <h2>Select Your Restaurant</h2>
+        <div class="restaurant-container">
+            <div class="restaurant" onclick="viewMenu('thoppi-vaipa')">
+                <img src="C:\Users\THILAGAVATHI M\Downloads\pexels-life-of-pix-67468 (1).jpg" alt="Thoppi Vaipa">
+                <h3>Thoppi Vaipa</h3>
+                <p>Traditional South Indian Cuisine</p>
+                <button>View Menu</button>
+            </div>
+            <div class="restaurant" onclick="viewMenu('alif')">
+                <img src="C:\Users\THILAGAVATHI M\Downloads\pexels-pixabay-262047.jpg" alt="Alif">
+                <h3>Alif</h3>
+                <p>Authentic Arabian Dishes</p>
+                <button>View Menu</button>
+            </div>
+            <div class="restaurant" onclick="viewMenu('grill-and-shake')">
+                <img src="C:\Users\THILAGAVATHI M\Downloads\pexels-chanwalrus-958545.jpg" alt="Grill and Shake">
+                <h3>Grill and Shake</h3>
+                <p>Grills & Milkshakes</p>
+                <button>View Menu</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" style="display:none;">
+        <h2>Menu</h2>
+        <div id="menu-items"></div>
+        <button onclick="goToCart()">View Cart</button>
+    </section>
+
+    <!-- Cart Section -->
+    <section id="cart" style="display:none;">
+        <h2>Your Cart</h2>
+        <div id="cart-items"></div>
+        <p>Total: ₹<span id="total-amount"></span></p>
+        <button onclick="goToPayment()">Proceed to Payment</button>
+    </section>
+
+    <!-- Order Details Section -->
+    <section id="order-details" style="display:none;">
+        <h2>Order Details</h2>
+        <form id="order-form">
+            <div id="step-1">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" placeholder="Enter your name" required>
+                <button type="button" onclick="nextStep(1)">Next</button>
+            </div>
+
+            <div id="step-2" style="display:none;">
+                <label for="address">Delivery Address:</label>
+                <input type="text" id="address" placeholder="Enter your address" required>
+                <button type="button" onclick="nextStep(2)">Next</button>
+            </div>
+
+            <div id="step-3" style="display:none;">
+                <label for="contact">Contact Number:</label>
+                <input type="text" id="contact" placeholder="Enter your contact number" required>
+                <button type="button" onclick="nextStep(3)">Next</button>
+            </div>
+
+            <div id="step-4" style="display:none;">
+                <label for="payment-method">Payment Method:</label>
+                <select id="payment-method" required>
+                    <option value="credit-card">Credit Card</option>
+                    <option value="debit-card">Debit Card</option>
+                    <option value="cash-on-delivery">Cash on Delivery</option>
+                </select>
+                <button type="submit">Place Order</button>
+            </div>
+        </form>
+    </section>
+
+    <!-- Thank You Section -->
+    <section id="thank-you" style="display:none;">
+        <h2>Thank you, <span id="user-name"></span>! Your order has been placed!</h2>
+        <p>KATS app payan paduthiyadharkaga NANDRI !!!.
+           Your food is on its way! 
+           enjoy it ! rate it!</p>
+    </section>
+
+    <script src="app.js"></script>
+</body>
+</html>
