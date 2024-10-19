@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classified Buy & Sell</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Classified Buy & Sell</h1>
+        <nav>
+            <a href="#register">Register</a>
+            <a href="#login">Login</a>
+            <a href="#sellProduct">Sell Product</a>
+            <a href="#products">Buy Products</a>
+        </nav>
+    </header>
+
+    <!-- Registration Form -->
+    <section id="register">
+        <h2>Register</h2>
+        <form id="registerForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br><br>
+            
+            <button type="submit">Register</button>
+        </form>
+    </section>
+
+    <!-- Login Form -->
+    <section id="login">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <label for="emailLogin">Email:</label>
+            <input type="email" id="emailLogin" name="emailLogin" required><br><br>
+            
+            <label for="passwordLogin">Password:</label>
+            <input type="password" id="passwordLogin" name="passwordLogin" required><br><br>
+            
+            <button type="submit">Login</button>
+        </form>
+    </section>
+
+    <!-- Sell Product Form (including image upload) -->
+    <section id="sellProduct">
+        <h2>Sell a Product</h2>
+        <form id="sellForm">
+            <label for="productName">Product Name:</label>
+            <input type="text" id="productName" name="productName" required><br><br>
+            
+            <label for="productPrice">Price:</label>
+            <input type="text" id="productPrice" name="productPrice" required><br><br>
+            
+            <label for="productDescription">Description:</label>
+            <textarea id="productDescription" name="productDescription" required></textarea><br><br>
+            
+            <label for="productImage">Upload Image:</label>
+            <input type="file" id="productImage" name="productImage" accept="image/*" required><br><br>
+            
+            <button type="submit">Sell Product</button>
+        </form>
+    </section>
+
+    <!-- Available Products for Buying -->
+    <section id="products">
+        <h2>Available Products</h2>
+        <div class="product-list">
+            <!-- Dynamically populated product items will go here -->
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
