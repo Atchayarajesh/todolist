@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classified Buy & Sell</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Classified Buy & Sell</h1>
+        <nav>
+            <a href="#" onclick="showRegisterPage()">Register</a>
+            <a href="#" onclick="showLoginPage()">Login</a>
+            <a href="#" onclick="showSellProduct()">Sell Product</a>
+            <a href="#" onclick="showProducts()">Buy Products</a>
+        </nav>
+    </header>
+
+    <!-- Registration Form -->
+    <section id="register">
+        <h2>Register</h2>
+        <form id="registerForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br><br>
+            
+            <button type="submit">Register</button>
+        </form>
+        <button id="showLogin">Already have an account? Login</button>
+    </section>
+
+    <!-- Login Form -->
+    <section id="login" class="hidden">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <label for="emailLogin">Email:</label>
+            <input type="email" id="emailLogin" name="emailLogin" required><br><br>
+            
+            <label for="passwordLogin">Password:</label>
+            <input type="password" id="passwordLogin" name="passwordLogin" required><br><br>
+            
+            <button type="submit">Login</button>
+        </form>
+        <button id="showRegister">Don't have an account? Register</button>
+    </section>
+
+    <!-- Sell Product Form -->
+    <section id="sellProduct" class="hidden">
+        <h2>Sell a Product</h2>
+        <form id="sellForm">
+            <label for="productName">Product Name:</label>
+            <input type="text" id="productName" name="productName" required><br><br>
+            
+            <label for="productPrice">Price:</label>
+            <input type="text" id="productPrice" name="productPrice" required><br><br>
+            
+            <label for="productDescription">Description:</label>
+            <textarea id="productDescription" name="productDescription" required></textarea><br><br>
+
+            <label for="productImage">Upload Image:</label>
+            <input type="file" id="productImage" name="productImage" accept="image/*" required><br><br>
+            
+            <button type="submit">Sell Product</button>
+            <button type="button" onclick="showProducts()">Back to Products</button>
+        </form>
+    </section>
+
+    <!-- Available Products for Buying -->
+    <section id="products" class="hidden">
+        <h2>Available Products</h2>
+        <div class="product-list"></div>
+        <button onclick="proceedToCheckout()">Proceed to Checkout</button>
+        <button type="button" onclick="showSellProduct()">Sell a Product</button>
+    </section>
+
+    <!-- Checkout Section -->
+    <section id="checkout" class="hidden">
+        <h2>Checkout</h2>
+        <form id="checkoutForm">
+            <label for="deliveryAddress">Delivery Address:</label>
+            <input type="text" id="deliveryAddress" name="deliveryAddress" required><br><br>
+            
+            <label for="pincode">Pincode:</label>
+            <input type="text" id="pincode" name="pincode" required><br><br>
+            
+            <label for="paymentMethod">Payment Method:</label>
+            <select id="paymentMethod" name="paymentMethod" required>
+                <option value="cash">Cash on Delivery</option>
+            </select><br><br>
+            
+            <button type="submit">Place Order</button>
+            <button type="button" onclick="showProducts()">Back to Products</button>
+        </form>
+    </section>
+
+    <!-- Order Confirmation -->
+    <section id="orderConfirmation" class="hidden">
+        <h2>Order Confirmation</h2>
+        <div id="orderDetails"></div>
+        <button type="button" onclick="showProducts()">Back to Products</button>
+        <div id="thankYouMessage" class="hidden">
+            <p>Thank you for your order!</p>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
