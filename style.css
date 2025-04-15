@@ -1,0 +1,141 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Comic Sans MS", cursive;
+}
+
+body, html {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+.container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+.scene {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 50px 20px;
+  text-align: center;
+  color: #222;
+  background: transparent;
+  z-index: 2;
+}
+
+.scene.active {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Buttons */
+button {
+  margin-top: 30px;
+  padding: 12px 24px;
+  background: #ff69b4;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: transform 0.2s;
+}
+button:hover {
+  transform: scale(1.1);
+}
+
+/* GIF Stickers */
+.gif-sticker {
+  width: 150px;
+  margin-bottom: 20px;
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+/* Background */
+.animated-bg {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, #f9d8eb, #f6f6ff, #cce7ff);
+  z-index: 0;
+  overflow: hidden;
+}
+
+.cloud {
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+  opacity: 0.5;
+  animation: cloudMove 60s linear infinite;
+}
+.cloud::before, .cloud::after {
+  content: '';
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+}
+
+.cloud1 {
+  width: 200px;
+  height: 60px;
+  top: 15%;
+  left: -200px;
+}
+.cloud1::before {
+  width: 100px; height: 100px;
+  top: -20px; left: 50px;
+}
+.cloud1::after {
+  width: 80px; height: 80px;
+  top: -10px; left: 120px;
+}
+
+.cloud2 {
+  width: 250px;
+  height: 70px;
+  top: 55%;
+  left: -250px;
+}
+.cloud2::before {
+  width: 130px; height: 130px;
+  top: -30px; left: 60px;
+}
+.cloud2::after {
+  width: 90px; height: 90px;
+  top: -15px; left: 150px;
+}
+
+@keyframes cloudMove {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(120vw); }
+}
+
+/* Twinkling Sparkles (like 2nd YouTube short) */
+.stars {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  background-image: radial-gradient(white 1px, transparent 1px);
+  background-size: 50px 50px;
+  animation: twinkle 3s infinite ease-in-out;
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 1; }
+}
